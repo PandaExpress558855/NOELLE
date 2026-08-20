@@ -1,10 +1,4 @@
-import datetime
-
-def greet(name):
-    print(f"NOELLE: Hello, {name}!")
-
-def say_name():
-    print("NOELLE: My name is NOELLE.")
+from commands import say_hello, say_name, greet, tell_time
 
 print("NOELLE is online")
 
@@ -19,8 +13,7 @@ while True:
         say_name()
 
     elif command == "time":
-        current_time = datetime.datetime.now().strftime("%H:%M:%S")
-        print(f"NOELLE: The current time is {current_time}.")
+        tell_time()
 
     elif command == "exit":
         print("NOELLE: Goodbye!")
