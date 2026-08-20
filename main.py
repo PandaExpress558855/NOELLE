@@ -1,3 +1,5 @@
+import datetime
+
 print("NOELLE is online")
 
 while True:
@@ -8,6 +10,10 @@ while True:
 
     elif command == "name":
         print("NOELLE: My name is NOELLE.")
+
+    elif command == "time":
+        current_time = datetime.datetime.now().strftime("%H:%M:%S")
+        print(f"NOELLE: The current time is {current_time}.")
 
     elif command == "exit":
         print("NOELLE: Goodbye!")
