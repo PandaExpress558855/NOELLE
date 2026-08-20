@@ -1,15 +1,22 @@
 import datetime
 
+def greet(name):
+    print(f"NOELLE: Hello, {name}!")
+
+def say_name():
+    print("NOELLE: My name is NOELLE.")
+
 print("NOELLE is online")
 
 while True:
     command = input("You: ").lower()
 
     if command == "hello":
-        print("NOELLE: Hello!") 
+        name = input("What is your name? ")
+        greet(name)
 
     elif command == "name":
-        print("NOELLE: My name is NOELLE.")
+        say_name()
 
     elif command == "time":
         current_time = datetime.datetime.now().strftime("%H:%M:%S")
@@ -19,5 +26,5 @@ while True:
         print("NOELLE: Goodbye!")
         break
 
-    else: 
+    else:
         print("NOELLE: I don't understand that yet.")
