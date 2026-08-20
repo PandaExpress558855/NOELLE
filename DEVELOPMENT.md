@@ -1,16 +1,43 @@
-## Day 1 — Command Refactoring
+# NOELLE Development Log
+
+## Day 1 — Core System & Command Routing
 
 ### Completed
-- Added function-based command system
+
+- Created the initial NOELLE project
+- Set up Git and GitHub repository
+- Created `main.py`
 - Created `commands.py`
-- Separated command logic from main program
-- Added dynamic time command
+- Implemented a continuous command loop using `while True`
+- Added basic commands:
+  - `hello`
+  - `name`
+  - `time`
+  - `exit`
+- Learned and implemented Python functions
+- Learned function parameters
+- Learned `return` values
 - Learned Python modules and imports
+- Separated NOELLE's capabilities into `commands.py`
+- Implemented a command dictionary
+- Implemented dynamic command routing using function references
+- Added unknown-command handling
 
 ### Architecture
-- `main.py` handles program flow and user input
-- `commands.py` contains NOELLE's capabilities
 
-### Next
-- Improve command handling
-- Add more useful system commands
+```text
+User Input
+    ↓
+main.py
+    ↓
+Command Dictionary
+    ↓
+Function Reference
+    ↓
+NOELLE Command
+    ↓
+Return Response
+    ↓
+main.py
+    ↓
+User
