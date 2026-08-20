@@ -1,19 +1,19 @@
-from commands import say_hello, say_name, greet, tell_time
+from commands import say_hello, say_name, tell_time
+
+commands = {
+    "hello": say_hello,
+    "name": say_name,
+    "time": tell_time
+}
 
 print("NOELLE is online")
 
 while True:
     command = input("You: ").lower()
 
-    if command == "hello":
-        name = input("What is your name? ")
-        greet(name)
-
-    elif command == "name":
-        say_name()
-
-    elif command == "time":
-        tell_time()
+    if command in commands:
+        response = commands[command]()
+        print(response)
 
     elif command == "exit":
         print("NOELLE: Goodbye!")
